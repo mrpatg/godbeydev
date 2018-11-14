@@ -108,11 +108,12 @@ if($_SESSION['success']){
                         <div class="row">
                             <div class="form-group col-sm-6">
                                 <label for="name">Payment Amount</label>
+                                
                                 <div class="input-group mb-2">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">$</span>
                                     </div>
-                                    <input type="text" class="form-control" id="amount" required>
+                                    <input type="text" class="form-control" id="amount" value="<?php echo $_GET['p']; ?>" required>
                                     <div class="invalid-feedback">
                                     Please enter an amount.
                                     </div>
@@ -122,7 +123,7 @@ if($_SESSION['success']){
                             <div class="form-group col-sm-12">                            
                                 <label for="name">Description</label>
                                 <div class="input-group mb-2">
-                                    <textarea class="form-control" id="description"></textarea>
+                                    <textarea class="form-control" id="description"><?php echo base64_decode($_GET['desc']); ?></textarea>
                                 </div>
                             </div>
                         </div>
@@ -264,13 +265,17 @@ if($_SESSION['success']){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="https://js.stripe.com/v3/"></script>
+<script src="../invoice/jquery.number.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
 
 <script>
     $(document).ready(function(){
+        
 
         var $input = $('#amount' );
+
+        $input.number( true, 2 );
 
         $input.on( "keyup", function( event ) {
             
@@ -292,8 +297,8 @@ if($_SESSION['success']){
             // Get the value.
             var input = $this.val();
             
-            var input = input.replace(/[\D\s\._\-]+/g, "");
-                    input = input ? parseInt( input, 10 ) : 0;
+            //var input = input.replace(/[\D\s\._\-]+/g, "");
+                    //input = input ? parseInt( input, 10 ) : 0;
 
                     // $this.val( function() {
                     //     return ( input === 0 ) ? "" : input.toLocaleString( "en-US" );
