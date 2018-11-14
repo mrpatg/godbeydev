@@ -16,6 +16,7 @@ if($_SESSION['success']){
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Godbey Development - Invoicing</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/main.css">
     <style>
     body{
         background-color: #f8f9fa!important;
@@ -69,14 +70,33 @@ if($_SESSION['success']){
         a:focus{
             color: #00BC8A;
         }
+
+        input[type="submit"], input[type="reset"], input[type="button"], button, .button {
+            background-color: #fafafa;
+            color: #efefef !important;
+        }
     </style>
 </head>
 <body>
-
+<section id="banner">
+				<div class="inner split">
+					<section>
+						<h2>Godbey Development</h2>
+						<h3>Applied Software Development and Consulting</h3>
+					</section>
+					<section>
+						<p>
+                            Invoice Payment Portal
+                        </p>
+                        <p></p>
+						<ul class="actions">
+							<li><a href="https://godbeydevelopment.com" class="button special">Back to main site</a></li>
+						</ul>
+					</section>
+				</div>
+			</section>
     <div class="container">
         <div class="block-heading">
-        <h1>Godbey Development</h1>
-        <small class="text-muted">Invoice Payment</small>
           <p></p>
           <p><img  class="mx-auto d-block" src="ccicons.png"></p>
         </div>
