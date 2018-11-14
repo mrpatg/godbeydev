@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 if($_SESSION['error']){
     $message = '<div class="alert alert-danger" role="alert"><strong>Error</strong>'.$_SESSION_['error'].'</div>';
