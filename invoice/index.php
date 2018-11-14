@@ -273,11 +273,12 @@ if($_SESSION['success']){
     $(document).ready(function(){
         
         var $price_check = $('#amount' ).val();
+
             if( $price_check.length === 0 ) {
                 // empty value
                 $('#payment-submit').prop('disabled', true);
             }else{
-                $('#total').text('Total: $' + $price_check.val());
+                $('#total').text('Total: $' + $price_check));
                 $('#payment-submit').prop('disabled', false);
             }
 
