@@ -1,0 +1,22 @@
+{
+  "name": "godbeydev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrpatg/godbeydev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrpatg/godbeydev/issues"
+  },
+  "homepage": "https://github.com/mrpatg/godbeydev#readme",
+  "dependencies": {
+    "html-minifier": "^3.5.21"
+  }
+}
