@@ -1,7 +1,12 @@
 <?php
 session_start();
 require_once('vendor/autoload.php');
-\Stripe\Stripe::setApiKey('sk_test_nVqLpEyjprXQmTgk9cwLuloN');
+$stripe = array(
+    "secret_key"      => "sk_test_QAOB4zNVtNPYNa4NU5TvyS3c",
+    "publishable_key" => "pk_test_emf3DSSLiFAB3x0dhSPxRABN"
+);
+
+\Stripe\Stripe::setApiKey($stripe['secret_key']);
 $token = $_POST['stripeToken'];
 // Convert amount to dollars
 $total = htmlspecialchars($_POST['amount']);
