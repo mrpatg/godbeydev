@@ -63,12 +63,12 @@ try{
   
   if ($success!=1)
   {
-      $_SESSION['error'] = $error1;
-      $_SESSION['error'] = $error2;
-      $_SESSION['error'] = $error3;
-      $_SESSION['error'] = $error4;
-      $_SESSION['error'] = $error5;
-      $_SESSION['error'] = $error6;
+      $_SESSION['error'] .= $error1;
+      $_SESSION['error'] .= $error2;
+      $_SESSION['error'] .= $error3;
+      $_SESSION['error'] .= $error4;
+      $_SESSION['error'] .= $error5;
+      $_SESSION['error'] .= $error6;
       header('Location: index.php');
       exit();
   }
