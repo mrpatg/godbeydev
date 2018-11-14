@@ -132,9 +132,9 @@ if($_SESSION['success']){
                         <h5 class="title">Contact Information</h5>
                         <div class="row">
                             <div class="form-group col-sm-6">
-                                <label for="name">Email Address</label>
+                                <label for="name">Email Address*</label>
                                 <div class="input-group mb-2">
-                                    <input type="text" class="form-control" id="email">
+                                    <input type="text" class="form-control" id="email" required>
                                 </div>
                                 <label for="name">Name</label>
                                 <div class="input-group mb-2">
