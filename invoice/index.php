@@ -75,6 +75,9 @@ if($_SESSION['success']){
             background-color: #fafafa;
             color: #efefef !important;
         }
+        #build_link{
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
@@ -251,7 +254,7 @@ if($_SESSION['success']){
                             <div class="form-group col-sm-12">
                                 <button id="payment-submit" class="btn btn-success mt-1" disabled><i class="fas fa-lock"></i> Submit Payment</button>
                                 <p>
-                                <small class="text-muted" id="build_link">get link</small>
+                                <small class="text-muted" id="build_link">Save Invoice</small>
                                 </p>
                             </div>
                         </div>
@@ -271,6 +274,7 @@ if($_SESSION['success']){
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="https://js.stripe.com/v3/"></script>
 <script src="../invoice/jquery.number.min.js"></script>
+<script src="../invoice/jquery.base64.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
 
