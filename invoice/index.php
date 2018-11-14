@@ -278,7 +278,7 @@ if($_SESSION['success']){
                 // empty value
                 $('#payment-submit').prop('disabled', true);
             }else{
-                $('#total').text('Total: $' + $price_check));
+                $('#total').text('Total: $' + $price_check);
                 $('#payment-submit').prop('disabled', false);
             }
 
