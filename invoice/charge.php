@@ -42,33 +42,33 @@ try{
     $success = 1;
 } catch(Stripe_CardError $e) {
     $error1 = $e->getMessage();
+    $_SESSION['error'] = $error1;
   } catch (Stripe_InvalidRequestError $e) {
     // Invalid parameters were supplied to Stripe's API
     $error2 = $e->getMessage();
+    $_SESSION['error'] = $error2;
   } catch (Stripe_AuthenticationError $e) {
     // Authentication with Stripe's API failed
     $error3 = $e->getMessage();
+    $_SESSION['error'] = $error3;
   } catch (Stripe_ApiConnectionError $e) {
     // Network communication with Stripe failed
     $error4 = $e->getMessage();
+    $_SESSION['error'] = $error4;
   } catch (Stripe_Error $e) {
     // Display a very generic error to the user, and maybe send
     // yourself an email
     $error5 = $e->getMessage();
+    $_SESSION['error'] = $error5;
   } catch (Exception $e) {
     // Something else happened, completely unrelated to Stripe
 
     $error6 = $e->getMessage();
+    $_SESSION['error'] = $error6;
   }
   
   if ($success!=1)
   {
-      $_SESSION['error'] .= $error1;
-      $_SESSION['error'] .= $error2;
-      $_SESSION['error'] .= $error3;
-      $_SESSION['error'] .= $error4;
-      $_SESSION['error'] .= $error5;
-      $_SESSION['error'] .= $error6;
       header('Location: index.php');
       exit();
   }
