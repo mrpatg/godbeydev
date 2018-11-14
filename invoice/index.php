@@ -272,43 +272,39 @@ if($_SESSION['success']){
 <script>
     $(document).ready(function(){
         
+        var $price_check = $('#amount' ).val();
+            if( $price_check.length === 0 ) {
+                // empty value
+                $('#payment-submit').prop('disabled', true);
+            }else{
+                $('#total').text('Total: $' + $price_check.val());
+                $('#payment-submit').prop('disabled', false);
+            }
 
         var $input = $('#amount' );
 
         $input.number( true, 2 );
 
         $input.on( "keyup", function( event ) {
-            
-            
             // When user select text in the document, also abort.
             var selection = window.getSelection().toString();
             if ( selection !== '' ) {
                 return;
-            }
-            
+            }            
             // When the arrow keys are pressed, abort.
             if ( $.inArray( event.keyCode, [38,40,37,39] ) !== -1 ) {
                 return;
+            } 
+            var $this = $( this );
+            var input = $this.val();
+            $this.val(input);
+            if( input.length === 0 ) {
+                
+            }else{
+                $('#total').text('Total: $' + $input.val());
+                $('#payment-submit').prop('disabled', false);
             }
             
-            
-            var $this = $( this );
-            
-            // Get the value.
-            var input = $this.val();
-            
-            //var input = input.replace(/[\D\s\._\-]+/g, "");
-                    //input = input ? parseInt( input, 10 ) : 0;
-
-                    // $this.val( function() {
-                    //     return ( input === 0 ) ? "" : input.toLocaleString( "en-US" );
-                    // } );
-
-                    $this.val(input);
-
-                    $('#total').text('Total: $' + $input.val());
-                    $('#payment-submit').prop('disabled', false);
-
         } );
         // Create a Stripe client
         var stripe = Stripe('pk_test_0xBMN6DRRYCw2nJHn2GPcQWt');
