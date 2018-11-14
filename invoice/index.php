@@ -310,7 +310,7 @@ if($_SESSION['success']){
             
         } );
         // Create a Stripe client
-        var stripe = Stripe('pk_test_emf3DSSLiFAB3x0dhSPxRABN');
+        var stripe = Stripe('pk_live_Z0SEwJuktLs0eLERxeYGoJnb');
 
         // Create an instance of Elements
         var elements = stripe.elements();
