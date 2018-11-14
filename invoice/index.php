@@ -100,7 +100,9 @@ if($_SESSION['success']){
           <p></p>
           <p><img  class="mx-auto d-block" src="ccicons.png"></p>
         </div>
+
         <div id="card-errors" role="alert">
+        <?php echo $message; ?>
         </div>
                 <form id="payment-form" action="./charge.php" method="POST" class="needs-validation" novalidate>
                     <div class="info">
