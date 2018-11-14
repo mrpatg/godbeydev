@@ -250,6 +250,9 @@ if($_SESSION['success']){
                             </div>
                             <div class="form-group col-sm-12">
                                 <button id="payment-submit" class="btn btn-success mt-1" disabled><i class="fas fa-lock"></i> Submit Payment</button>
+                                <p>
+                                <small class="text-muted" id="build_link">get link</small>
+                                </p>
                             </div>
                         </div>
 
