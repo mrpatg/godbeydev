@@ -2,8 +2,8 @@
 require_once('vendor/autoload.php');
 
 $stripe = array(
-  "secret_key"      => "sk_test_QAOB4zNVtNPYNa4NU5TvyS3c",
-  "publishable_key" => "pk_test_emf3DSSLiFAB3x0dhSPxRABN"
+  "secret_key"      => "sk_live_6tNxJWooLiV66njgsLATdvwZ",
+  "publishable_key" => "pk_live_Z0SEwJuktLs0eLERxeYGoJnb"
 );
 
 \Stripe\Stripe::setApiKey($stripe['secret_key']);

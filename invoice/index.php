@@ -1,4 +1,5 @@
 <?php
+require_once('config.php');
 session_start();
 if($_SESSION['error']){
     $message = '<div class="alert alert-danger" role="alert"><strong>Error</strong>'.$_SESSION_['error'].'</div>';
@@ -317,7 +318,8 @@ if($_SESSION['success']){
             
         } );
         // Create a Stripe client
-        var stripe = Stripe('pk_live_Z0SEwJuktLs0eLERxeYGoJnb');
+
+        var stripe = Stripe('<?php echo $stripe['publishable_key'];?>');
 
         // Create an instance of Elements
         var elements = stripe.elements();
